@@ -11,6 +11,57 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 
 
+//validation used from my last project below
+
+function valiateInput(value) {
+    if (value != "") {
+        return true;
+    } else {
+        return "Please answer the question with some kind on input.";
+    }
+}
+
+//manager questions below
+    // ask manager name
+
+    // ask for manager id
+
+    //ask manager email address
+
+    // ask manager office number 
+
+
+
+// engineer questions 
+    // ask for engineer name
+
+    // ask for engineer's id
+
+    // ask for engineer's email address
+
+    // ask for GitHub username
+
+// intern questions
+    // ask intern's name
+
+    // ask for intern's id
+
+    // ask intern's email address
+
+    // ask intern's school
+
+
+// Need to ask if the person inputting this info needs add another person
+    // question about the new team member's role.
+
+
+
+
+
+
+
+
+
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
