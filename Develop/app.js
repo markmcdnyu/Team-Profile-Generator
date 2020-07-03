@@ -13,7 +13,7 @@ const render = require("./lib/htmlRenderer");
 
 //validation used from my last project below
 
-function valiateInput(value) {
+function validateInput(value) {
     if (value != "") {
         return true;
     } else {
@@ -22,13 +22,27 @@ function valiateInput(value) {
 }
 
 //manager questions below
-    // ask manager name
 
-    // ask for manager id
+const managerQuestions = [
+    {
+        // ask manager name
+        type: "input",
+        name: "name",
+        message: "What is the full name of the manager of this team?",
+        validate: validateInput,
+    },
+    {
+        // ask for manager id
 
-    //ask manager email address
+    },
+    {
+        //ask manager email address
+    },
+    {
+        // ask manager office number 
+    },
+];
 
-    // ask manager office number 
 
 
 
