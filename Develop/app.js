@@ -85,7 +85,7 @@ const engineerQuestions = [
         // ask for engineer name
         type: "input",
         name: "name",
-        message: "What is the full name of an engineer on this team?",
+        message: "What is the engineer's full name?",
         validate: validateInput,
     },
     {
@@ -125,24 +125,83 @@ const engineerQuestions = [
 ];
 
 // intern questions
-
-    // ask intern's name
-
-    // ask for intern's id
-
-    // ask intern's email address
-
-    // ask intern's school
+const internQuestions = [
+    {
+        // ask intern's name
+        type: "input",
+        name: "name",
+        message: "What is the intern's full name?",
+        validate: validateInput,
+    },
+    {
+        // ask for intern's id
+        type: "input",
+        name: "id",
+        message: "What is the intern's ID number?",
+        validate: function (value) {
+            if (!/^[0-9]+$/.test(value)) {
+                return "ID must be a number value greater than zero.";
+            } else {
+                return true;
+            }
+        },
+    },
+    {
+        // ask intern's email address
+        type: "input",
+        name: "email",
+        message: "What is this intern's email address?",
+        validate: function (value) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                return true;
+            } else {
+                return "Not a valid email address. Please enter valid email address.";
+            }
+        },
+    },
+    {
+        // ask intern's school
+        type: "input",
+        name: "school",
+        message: "What is the name of the intern's school?",
+    },
+];
 
 
 // Need to ask if the person inputting this info needs add another person
-    // question about the new team member's role.
+// question about the new team member's role.
+const addMoreTeamMembers = [
+    {
+        type: "confirm",
+        name: "newTeamMembers",
+        message: "do you want to add another team member?",
+        default: false,
+    },
+
+];
+
+// add in question for the role of the new team member
+const teamMemberRole = [
+    {
+        type: "list",
+        name: "role",
+        message: "What is the role of the new team member you are adding?",
+        choices: ["Engineer", "Intern"],
+        validate: validateInput,
+    }
+];
 
 
+//Need a place to store data
+// var employeeData = [];
+
+//function to trigger the logic -- 
+    //function addMember ();
+/*big if/else
+    inquirer.prompt
 
 
-
-
+*/
 
 
 
