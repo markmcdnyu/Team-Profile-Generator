@@ -48,6 +48,16 @@ const managerQuestions = [
     {
         //ask manager email address
         // using the email validation from last project should work 
+        type: "input",
+        name: "email",
+        message: "What is the manager's work email address?",
+        validate: function (value) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                return true;
+            } else {
+                return "Not a valid email address. Please enter valid email address.";
+            }
+        },
     },
     {
         // ask manager office number 
