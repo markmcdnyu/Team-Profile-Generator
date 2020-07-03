@@ -33,10 +33,21 @@ const managerQuestions = [
     },
     {
         // ask for manager id
+        type: "input",
+        name: "id",
+        message: "What is the manager ID number?",
+        validate: function (value) {
+            if (!/^[0-9]+$/.test(value)) {
+                return "ID must be a number value greater than zero.";
+            } else {
+                return true;
+            }
+        },
 
     },
     {
         //ask manager email address
+        // using the email validation from last project should work 
     },
     {
         // ask manager office number 
