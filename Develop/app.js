@@ -80,15 +80,52 @@ const managerQuestions = [
 
 
 // engineer questions 
-    // ask for engineer name
+const engineerQuestions = [
+    {
+        // ask for engineer name
+        type: "input",
+        name: "name",
+        message: "What is the full name of an engineer on this team?",
+        validate: validateInput,
+    },
+    {
+        // ask for engineer's id
+        type: "input",
+        name: "id",
+        message: "What is this engineer's ID number?",
+        validate: function (value) {
+            if (!/^[0-9]+$/.test(value)) {
+                return "ID must be a number value greater than zero.";
+            } else {
+                return true;
+            }
+        },
+    },
+    {
+        // ask for engineer's email address
+        type: "input",
+        name: "email",
+        message: "What is this engineer's email address?",
+        validate: function (value) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                return true;
+            } else {
+                return "Not a valid email address. Please enter valid email address.";
+            }
+        },
+    },
+    {
+        // ask for GitHub username
+        type: "input",
+        name: "github",
+        message: "What is this engineer's GitHub username?",
+        validate: validateInput,
+    },
 
-    // ask for engineer's id
-
-    // ask for engineer's email address
-
-    // ask for GitHub username
+];
 
 // intern questions
+
     // ask intern's name
 
     // ask for intern's id
