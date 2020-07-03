@@ -60,7 +60,19 @@ const managerQuestions = [
         },
     },
     {
-        // ask manager office number 
+        // ask manager office number
+        //use the same number validation in the ID object
+        type: "input",
+        name: "officeNumber",
+        message: "What is the manager's office number?",
+        validate: function (value) {
+            if (!/^[0-9]+$/.test(value)) {
+                return "ID must be a numerical value greater than zero.";
+            } else {
+                return true;
+            }
+        },
+
     },
 ];
 
