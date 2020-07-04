@@ -174,7 +174,7 @@ const addMoreTeamMembers = [
     {
         type: "confirm",
         name: "newTeamMembers",
-        message: "do you want to add another team member?",
+        message: "Do you want to add another team member?",
         default: false,
     },
 
@@ -196,13 +196,26 @@ const teamMemberRole = [
 // var employeeData = [];
 
 //function to trigger the logic -- 
-    //function addMember ();
-/*big if/else
-    inquirer.prompt
 
+// function addMember ();
+/*big if/else with inquirer prompts*/
+// inquirer.prompt(add)
 
-*/
+//new Engineer
+// .......
+// employeeData.push(newEngineer);
+// addMember();
 
+inquirer.prompt(managerQuestions).then((managerAnswers) => {
+    let newManager = new Manager(
+        managerAnswers.name,
+        managerAnswers.id,
+        managerAnswers.email,
+        managerAnswers.officeNumber,
+    );
+    //push this
+    // addMembers():
+});
 
 
 // Write code to use inquirer to gather information about the development team members,
