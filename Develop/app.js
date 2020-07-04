@@ -256,8 +256,9 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
         managerAnswers.email,
         managerAnswers.officeNumber,
     );
-    //push this
-    // addMember():
+    //push this to employeeData too
+    employeeData.push(newManager);
+    addMember();
 });
 
 
