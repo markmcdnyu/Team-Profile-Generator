@@ -195,16 +195,59 @@ const teamMemberRole = [
 //Need a place to store data
 var employeeData = [];
 
-//function to trigger the logic -- 
+//function to trigger adding more team members -- 
 
-// function addMember ();
-/*big if/else with inquirer prompts*/
-// inquirer.prompt(add)
+function addMember() {
+    /*big if/else with inquirer prompts for adding new team members*/
+    inquirer.prompt(addMoreTeamMembers).then((answer) => {
+        if (answer.newTeamMembers) {
+            //inquirer prompt for the role of the newest team member
+            inquirer.prompt(teamMemberRole).then((roleSelection) => {
+                //inquirer prompt for the engineering role
+                if (roleSelection.role === "Engineer") {
+                    inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
+                        //use the engineer constructor for a new instance of Engineer
+                        let newEngineer = new Engineer(
+                            engineerAnswers.name,
+                            engineerAnswers.id,
+                            engineerAnswers.email,
+                            engineerAnswers.github,
+                        );
+                        //need to send the data to the employee data array
+                        employeeData.push(newEngineer);
+                        //call the addMember function
+                        addMember();
+                    });
+                } else {
+                    //do the same thing for the intern role
+                    inquirer.prompt(internQuestions).then((internAnswers) => {
+                        //use the engineer constructor for a new instance of Intern
+                        let newIntern = new Intern(
+                            internAnswers.name,
+                            internAnswers.id,
+                            internAnswers.email,
+                            internAnswers.school,
+                        );
+                        //need to send the data to the employee data array
+                        employeeData.push(newIntern);
+                        //call the addMember function
+                        addMember();
+                    });
+                }
+            });
+        } else {
+            //use the render function and push the employee data
+            let htmlOutput = render(employeeData);
+            //us the fs.writeFile 
+            fs.writeFile(outputPath, htmlOutput, function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+            });
+        }
+    });
+}
 
-//new Engineer
-// .......
-// employeeData.push(newEngineer);
-// addMember();
 
 inquirer.prompt(managerQuestions).then((managerAnswers) => {
     let newManager = new Manager(
@@ -214,7 +257,7 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
         managerAnswers.officeNumber,
     );
     //push this
-    // addMembers():
+    // addMember():
 });
 
 
