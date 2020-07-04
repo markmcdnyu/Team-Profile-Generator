@@ -221,7 +221,7 @@ function addMember() {
                 } else {
                     //do the same thing for the intern role
                     inquirer.prompt(internQuestions).then((internAnswers) => {
-                        //use the engineer constructor for a new instance of Intern
+                        //use the intern constructor for a new instance of Intern
                         let newIntern = new Intern(
                             internAnswers.name,
                             internAnswers.id,
@@ -250,6 +250,7 @@ function addMember() {
 
 
 inquirer.prompt(managerQuestions).then((managerAnswers) => {
+    //use the manager constructor for a new instance of Manager
     let newManager = new Manager(
         managerAnswers.name,
         managerAnswers.id,
@@ -260,6 +261,7 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
     employeeData.push(newManager);
     addMember();
 });
+
 
 
 // Write code to use inquirer to gather information about the development team members,
