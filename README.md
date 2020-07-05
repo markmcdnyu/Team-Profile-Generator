@@ -1,11 +1,13 @@
-# Unit 10 OOP Homework: Template Engine - Employee Summary
+# Template Engine - Object-oriented programming - Team/Employee Generator
 
-One of the most important aspects of programming is writing code that is readable, reliable, and maintainable. Oftentimes, *how* we design our code is just as important as the code itself. In this homework assignment, your challenge is to build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, you will also be ensuring that all unit tests pass.
+Objective: writing code that is readable, reliable, and maintainable. 
+
+Challenge: build a Node CLI that takes in information about employees and generates an HTML webpage that displays summaries for each person. Since testing is a key piece in making code maintainable, I ensured that my code passed all unit tests.
 
 
 ## Instructions
 
-You will build a software engineering team generator command line application. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. This assignment must also pass all unit tests. When the user has completed building the team, the application will create an HTML file that displays a nicely formatted team roster based on the information provided by the user. Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
+I built a software engineering team generator command line application. The application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns. This project passes all unit tests. When the user has completed building the team, the application will create an HTML file that displays a nicely formatted team roster based on the information provided by the user. Following the [common templates for user stories](https://en.wikipedia.org/wiki/User_story#Common_templates), we can frame this challenge as follows:
 
 ```
 As a manager
@@ -13,20 +15,19 @@ I want to generate a webpage that displays my team's basic info
 so that I have quick access to emails and GitHub profiles
 ```
 
-How do you deliver this? Here are some guidelines:
+How do you deliver this?
 
-* Use the [Inquirer npm package](https://github.com/SBoudrias/Inquirer.js/) to prompt the user for their email, id, and specific information based on their role with the company. For instance, an intern may provide their school, whereas an engineer may provide their GitHub username.
+* I used the [Inquirer npm package](https://github.com/SBoudrias/Inquirer.js/) to prompt the user for their email, id, and specific information based on their role with the company. For instance, an intern may provide their school, whereas an engineer may provide their GitHub username.
 
-* Your app will run as a Node CLI to gather information about each employee.
+* My app will run as a Node CLI to gather information about each employee.
 
 * Below is an example of what your application may look like. Remember, the styling is completely up to you so try to make it unique.
 
 ![Employee Summary 1](./Assets/10-OOP-homework-demo-1.png)
 ![Employee Summary 2](./Assets/10-OOP-homework-demo-2.png)
 
-In the `Develop` folder, there is a `package.json`, so make sure to `npm install`.
 
-The dependencies are, [jest](https://jestjs.io/) for running the provided tests, and [inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
+Dependencies are, [jest](https://jestjs.io/) for running the provided tests, and [inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user.
 
 There are also unit tests to help you build the classes necessary.
 
@@ -136,40 +137,19 @@ The project must generate a `team.html` page in the `output` directory, that dis
 
   * Role-specific property (School, link to GitHub profile, or office number)
 
-## Bonus
+## Application Requirements
 
-* Use validation to ensure that the information provided is in the proper expected format.
+* Functional application.
 
-* Add the application to your portfolio.
+* Here is my <a href="https://github.com/markmcdnyu/Team-Profile-Generator" target="_blank">GitHub Repo Link</a>.
 
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-* Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-* Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
+## Environment
+* JavaScript
+* Node.js
+* HTML/CSS
 
 
-## Submission on BCS
+## Contributors 
+* Mark McDonald
+* GitHub: markmcdnyu
 
-You are required to submit the following:
-
-* The URL of the GitHub repository
-
-* A video demonstrating the entirety of the app's functionality 
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
