@@ -18,3 +18,9 @@ body {
 .team-heading {
     background: #4cc2df;
 }
+
+@media (max-width: 768px) {
+	.team-area {
+		flex-direction: column;
+	}
+}
