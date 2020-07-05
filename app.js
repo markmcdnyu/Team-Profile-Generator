@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./Develop/lib/htmlRenderer");
 
 
-//validation function used from my last project below
+//validation function 
 
 function validateInput(value) {
     if (value != "") {

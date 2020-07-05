@@ -1,4 +1,4 @@
-# Template Engine - Object-oriented programming - Team/Employee Generator
+# Team/Employee Generator - Object-oriented programming - Node.js
 
 Objective: writing code that is readable, reliable, and maintainable. 
 
